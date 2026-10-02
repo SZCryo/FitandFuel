@@ -1,0 +1,702 @@
+
+
+=== PAGE 1 ===
+Product definition, features, page map, user stories, and functional scope
+Lift & Fuel
+Product White Paper & Functional Blueprint
+A personalized diet and workout planning app that turns profile data, goals,
+restrictions, and available equipment into a daily plan users can actually
+follow.
+What this document covers
+Product definition, target users, core
+flows, feature set, page map, user
+stories, business rules, MVP scope, and
+future expansion.
+Product promise
+Plan smart, eat with clarity, train with
+structure, and look back at real progress
+without juggling separate apps for
+nutrition and workouts.
+ Plan
+ Track
+ Improve
+Prepared as a product-first specification based on the Lift & Fuel concept materials provided by the
+team.
+
+
+=== PAGE 2 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 1
+1. What Lift & Fuel actually is
+This paper reframes the project around app functionality rather than implementation. The
+goal is to define the product clearly enough that the team can design pages, prioritize
+features, and begin building.
+Lift & Fuel is a guided fitness planning app for students, beginners, and consistency-focused users who
+want one place to manage nutrition and training. The app collects a small set of personal inputs — such
+as age, height, weight, activity level, goal, dietary restrictions, and available equipment — then returns
+a usable plan: daily calories, macro guidance, a meal plan, and a workout structure. From that point
+forward, the app becomes a daily operating system for execution: check today's targets, log meals, start
+the workout, mark completion, and review history.
+Personalized from the start
+The first interaction is not generic browsing. The
+app asks for profile data, constraints, and goals
+so the first result already feels relevant.
+One daily dashboard
+Users should not have to bounce between
+separate meal and workout tools. The diary acts
+as the home screen for the day.
+Actionable, not abstract
+Every recommendation should be attached to
+something the user can do now: eat this meal,
+hit this protein target, start this workout.
+Progress users can feel
+History is not just storage. It should help users
+understand adherence, consistency, and
+whether they are moving toward their goal.
+In one sentence: Lift & Fuel turns motivation into a concrete daily plan, then makes it easy to follow and
+review that plan.
+Profile intake
+Age, height, weight,
+goal, activity, diet, equipment
+Plan generation
+Daily calories, macros,
+meals, weekly workout split
+Daily execution
+Diary, meal logging,
+start workout, completion
+History & review
+Calendar, nutrition
+summary, workout details
+Plan refinement
+Use previous activity
+to improve future plans
+Core product loop
+The app is most valuable when planning, execution, logging, and review all live in one continuous user journey.
+
+
+=== PAGE 3 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 2
+2. Problem, opportunity, and product goals
+The concept deck already identifies the core pain point: users know they want to get
+healthier, but struggle to convert personal data into a clear starting plan.
+Problem to solve
+bullet
+Generic diet advice rarely matches a user's
+body, schedule, restrictions, or goal.
+bullet
+Workout plans are intimidating when users do
+not know which split, rep ranges, or exercises
+make sense for them.
+bullet
+Nutrition and workouts are often tracked in
+separate places, which makes consistency
+harder.
+bullet
+Beginners especially need an app that tells
+them what to do today, not just what fitness
+terms mean.
+Product goals
+bullet
+Give every new user a personalized plan within
+a short onboarding flow.
+bullet
+Make the daily experience simple enough to
+use in under a minute before a meal or
+workout.
+bullet
+Show progress in a way that reinforces
+consistency and builds confidence.
+bullet
+Create a foundation that can become smarter
+over time by learning from diary and workout
+history.
+Who the first version is for
+Beginner lifter
+Needs a clear starting point for both eating
+and training without manually researching
+everything.
+Busy student
+Needs a plan that fits a changing schedule
+and reduces decision fatigue around meals
+and workouts.
+Consistency seeker
+May already know the basics, but wants a
+simple app that keeps goals visible and
+progress measurable.
+Non-goals for MVP
+bullet
+Not a replacement for medical nutrition advice
+or injury rehab planning.
+bullet
+Not a fully social fitness community in the first
+release.
+bullet
+Not an advanced bodybuilding programming
+tool with every possible training methodology
+on day one.
+
+
+=== PAGE 4 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 3
+3. Functional product architecture
+Instead of a technical stack diagram, the product should be understood as a closed-loop
+system: inputs become a plan, the plan becomes daily actions, and those actions become
+history that can improve future guidance.
+Lift & Fuel
+Daily coach
+Profile & Goals
+inputs, goal, constraints
+Nutrition Plan
+calories, macros, meals
+Workout Plan
+split, exercises, sets, reps
+History & Trends
+calendar, summaries, progress
+Every module should feed the same daily habit loop.
+ Module
+ Required behavior
+Profile & goals
+Collect age, height, weight, activity level, primary goal, dietary restrictions,
+and available equipment.
+Nutrition plan
+Return a calorie target, macro guidance, and a customizable meal plan that
+can be swapped or regenerated.
+Workout plan
+Return a weekly split or daily session structure based on goal and
+equipment availability.
+Diary & execution
+Make today's plan visible: calorie progress, macro progress, meals logged,
+workout status, and quick actions.
+History & feedback loop
+Store what happened each day so the app can show summaries, logged
+days, streaks, and later adapt future plans.
+Design implication: every major feature should support the same question — What does this user need
+to do today to move toward their goal?
+
+
+=== PAGE 5 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 4
+4. Core feature set
+The source materials naturally group the app into five major experiences. These should
+become the product pillars around which screens and user stories are organized.
+A. Onboarding & plan generation
+Collect user inputs, let the user choose a goal, and generate an initial diet and workout plan with visible
+calorie and macro targets.
+B. Daily diary
+Show today's status at a glance: calories, protein, carbs, fat, meals logged, and workout completion state.
+C. Meal planning & customization
+Provide a 3-course meal plan, show meal-level and day-level macros, and let users edit, swap, or add meals.
+D. Workout planning & logging
+Give users a routine they can actually run, then let them log sets, reps, weight, duration, and completion.
+E. History & analytics
+Use a calendar and daily detail views so users can review previous days, logged activity, adherence, and
+improvement over time.
+These pillars map directly to the concept deck and should also map directly to navigation, engineering
+epics, and design workstreams.
+
+
+=== PAGE 6 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 5
+5. Page map and navigation
+Below is a product-level information architecture showing the minimum screens needed for a
+coherent first release.
+Lift & Fuel
+Welcome
+Onboarding
+Plan Result
+Diary
+History
+Profile Inputs
+Goal & Filters
+Meal Plan
+Workout Plan
+Meal Log
+Active Workout
+Workout Summary
+Day Details
+Primary bottom navigation
+Suggested persistent tabs: Diary • Meal Plan • Workout • History • Profile
+Recommended navigation model: use a small number of persistent destinations — Diary, Meal Plan,
+Workout, History, and Profile — so the user always knows where to go next.
+ Primary tab
+ Purpose
+ Why it matters
+Diary
+Today's dashboard with nutrition progress, meal
+status, and workout status.
+Highest-frequency screen.
+Meal Plan
+Generated meals, macro totals,
+editing/swapping actions, and meal logging.
+Should support quick changes
+without losing totals.
+Workout
+Workout plan list, active workout logging, and
+completion summary.
+Should feel fast to use during
+training.
+History
+Calendar and previous-day summaries.
+Turns raw logs into visible
+progress.
+Profile
+Personal details, preferences, restrictions, goal,
+and possibly check-ins.
+Needed for regeneration and
+plan updates.
+
+
+=== PAGE 7 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 6
+6. Detailed page specifications — part I
+Each screen below exists to move the user from setup to confident daily action. This table can
+be used directly as a design and build checklist.
+ Screen
+ Purpose
+ Primary actions
+ Key output
+Priorit
+ y
+Welcome /
+intro
+Introduce the app in
+one sentence and
+start onboarding.
+Start, learn basics, sign in
+later if needed.
+Simple entry point; do
+not overload with text.
+MVP
+Profile inputs
+Collect age, height,
+weight, and activity
+level.
+Enter or edit body metrics.
+Feeds calorie and
+macro calculations.
+MVP
+Goal &
+preferences
+Collect primary goal,
+dietary restrictions,
+and available
+equipment.
+Choose goal, restrictions,
+equipment access.
+Determines meal and
+workout logic.
+MVP
+Plan
+generation
+Show loading state
+and generated output
+summary.
+Generate plan, review
+calories/macros, continue.
+Confirms
+personalization
+worked.
+MVP
+Diary
+Home screen for the
+current day.
+See nutrition progress,
+meal completion, workout
+status, start workout.
+Highest-value screen in
+the app.
+MVP
+Log meal
+Add breakfast, lunch,
+dinner, or snack
+manually.
+Enter meal name and
+macro values or calories.
+Supports flexibility
+when users eat outside
+the plan.
+MVP
+Meal plan
+Display recommended
+meals for the day.
+View
+breakfast/lunch/dinner,
+edit, swap, regenerate.
+Core nutrition
+experience.
+MVP
+
+
+=== PAGE 8 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 7
+7. Detailed page specifications — part II
+These screens complete the loop by supporting workout execution, review, and profile
+maintenance.
+ Screen
+ Purpose
+ Primary actions
+ Key output
+Priorit
+ y
+Workout plan
+Show the selected
+routine and upcoming
+session.
+Review exercise list, start
+workout, regenerate if
+needed.
+Turns programming
+into a concrete session.
+MVP
+Active workout
+Let the user log sets,
+reps, and weight while
+training.
+Update exercise data,
+finish workout.
+Should be fast and
+uncluttered.
+MVP
+Workout
+summary
+Summarize completed
+session details.
+Review duration, exercise
+count, set details.
+Creates a sense of
+completion and
+records history.
+MVP
+History
+calendar
+Show which days have
+logged nutrition or
+workouts.
+Select any date, scan
+logged days.
+Makes consistency
+visible.
+MVP
+Day details
+Show calories, macros,
+workout result, and
+exercise log for a
+selected date.
+View summary, drill into
+workout details.
+Useful for reflection
+and plan adjustment.
+MVP
+Profile &
+settings
+Maintain personal
+inputs and
+preferences.
+Edit body data, goal,
+restrictions, equipment,
+maybe units.
+Required for plan
+updates.
+MVP
+Check-in /
+progress
+Optional later screen
+for bodyweight
+updates, goal
+progress, and
+recommendations.
+Submit weekly check-in,
+view trends.
+Strong follow-up
+release candidate.
+Next
+
+
+=== PAGE 9 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 8
+8. User stories — onboarding, planning, and
+nutrition
+These stories define what must feel true for the user. They are suitable for backlog creation
+and acceptance review.
+ Persona /
+ epic
+ User story
+ Acceptance intent
+New user
+As a new user, I want to enter my profile data and activity
+level so the app can generate a plan that fits my body and
+lifestyle.
+A plan cannot be generated
+until required fields are
+present, and the resulting
+targets are shown
+immediately.
+Goal-based
+user
+As a user, I want to choose whether I am trying to lose
+weight, maintain weight, build muscle, or improve
+consistency so the recommendations align with my intent.
+Changing the goal updates
+calorie/macros logic and the
+framing of the plan.
+Restricted
+eater
+As a user with dietary restrictions, I want the meal plan to
+respect those restrictions so the recommendations are
+actually usable.
+Filtered meals exclude
+unsupported options and
+preserve visible macro totals.
+Flexible
+eater
+As a user, I want to swap or edit meals without losing the
+full-day macro view so I can personalize the plan without
+breaking it.
+Any meal change updates
+per-meal and per-day
+nutrition totals.
+Off-plan
+eater
+As a user, I want to add an extra meal or snack when I eat
+something not already in the plan so the diary still reflects
+reality.
+The diary supports manual
+logging and updates progress
+bars immediately.
+Nutrition design principle: the app should make the user feel guided, not trapped. Customization
+should be possible without making totals confusing.
+
+
+=== PAGE 10 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 9
+9. User stories — workout execution, diary, and
+history
+These stories cover the day-to-day experience that keeps users coming back after the initial
+plan is generated.
+ Persona /
+ epic
+ User story
+ Acceptance intent
+Gym user
+As a user, I want a workout plan that matches my
+equipment access so the exercises are realistic for where I
+train.
+Exercise selection reflects
+chosen equipment options
+and the user can still
+regenerate the plan.
+In-session
+user
+As a user, I want to log sets, reps, and weight during a
+workout so I can track what I actually did instead of only
+what was prescribed.
+The active workout screen
+stores per-set results and
+allows session completion.
+Daily planner
+As a user, I want one diary screen that shows both
+nutrition and workout progress so I know where I stand
+today at a glance.
+Diary shows calories, macros,
+meal status, and workout
+completion without extra
+navigation.
+Consistency-f
+ocused user
+As a user, I want to review previous days in a calendar view
+so I can see patterns, missed days, and streaks.
+History visually marks logged
+days and opens details for any
+selected date.
+Reflective
+user
+As a user, I want to review completed workout details and
+daily nutrition summaries so I can understand my
+adherence and performance over time.
+Day detail view combines
+nutrition totals with workout
+summary and drill-down
+details.
+
+
+=== PAGE 11 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 10
+10. Functional rules and product logic
+The first version does not need an advanced recommendation engine, but it does need clear, predictable
+product rules so recommendations feel trustworthy.
+ Rule area
+ Required product behavior
+Profile completeness
+Required fields should include age, height, weight, activity level, goal, and at least
+one usable diet/equipment preference set before generation.
+Goal modes
+Initial goal modes should be limited and explicit: lose weight, maintain weight,
+build muscle, improve consistency.
+Calorie target
+The planner should calculate a target from user inputs, then adjust based on goal
+mode. The exact formula is less important than consistency and explainability.
+Macro guidance
+Protein, carbs, fat, and total calories should always be visible at both summary and
+diary levels.
+Meal planning
+The daily meal plan should contain at least breakfast, lunch, and dinner, with
+optional snacks or manual additions.
+Meal customization
+Edit, swap, or regenerate actions must preserve a clear view of what changed and
+how it affects totals.
+Workout generation
+Workout structure should account for goal and equipment, then return exercises
+with sets and reps that are beginner-friendly.
+Workout logging
+Each exercise should support logging actual performance, not only marking the
+whole workout complete.
+History capture
+Every nutrition and workout action should create a day-level record that can be
+surfaced later in history.
+Future refinement
+Prior analytics can later influence next-plan suggestions, but the MVP can start
+with rules and stored history before becoming adaptive.
+
+
+=== PAGE 12 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 11
+11. What the app needs to remember
+This is the product-data view, not the technical schema. It defines the objects the experience
+depends on.
+ Product object
+ Why it matters
+User profile
+Height, weight, age, activity level, goal, restrictions, equipment, units, and optional
+progress check-ins.
+Nutrition targets
+Daily calories, protein, carbs, fat, and the date range they apply to.
+Meal plan
+A day or week plan containing meals, ingredients or meal names, and meal-level
+macro totals.
+Meal log entry
+What the user actually ate, when they ate it, and how it impacted day totals.
+Workout program
+Split name, session list, exercises, prescribed sets/reps, and regeneration
+timestamp/version.
+Workout session
+log
+Started/completed state, exercise results, set-by-set values, and session duration.
+Daily summary
+One combined view of nutrition totals, workout status, and completion signals for a
+calendar day.
+History markers
+Simple indicators for which days have activity, adherence, and progress notes.
+Useful analytics for the product team include: onboarding completion rate, plan generation rate,
+number of diary opens per week, workouts started per user, meal swaps per user, days logged per
+month, and percentage of days where calorie/protein targets are met.
+
+
+=== PAGE 13 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 12
+12. MVP scope, release sequencing, and
+expansion
+The MVP should prove that users can go from setup to daily use in one coherent loop.
+Everything else should support that loop rather than distract from it.
+ Release stage
+ Recommended scope
+MVP
+Onboarding, goal selection, calorie/macro targets, 3-course meal plan, meal edit/swap,
+diary dashboard, workout plan, set/rep logging, workout summary, history calendar, day
+details.
+V1.1
+Weekly check-ins, saved meals, streaks, better macro explanations, reminders, richer
+history charts, easier plan regeneration.
+V2+
+Adaptive recommendations from history, grocery list support, coach mode, social
+accountability, wearable integrations, habit nudges, deeper analytics.
+Suggested product build order
+1. Setup first
+Build profile intake, goal selection, and plan
+generation before polishing secondary screens.
+2. Diary shell
+Create the daily dashboard early so every new
+feature has a clear home.
+3. Nutrition loop
+Complete meal plan, meal editing, and diary
+nutrition tracking as the first end-to-end flow.
+4. Workout loop
+Add workout plan, active logging, and session
+summary as the second end-to-end flow.
+5. History loop
+Add calendar and daily review only after the app
+is already producing real daily records.
+6. Smarter iteration
+Use real usage patterns to decide what should
+adapt, automate, or personalize next.
+
+
+=== PAGE 14 ===
+LIFT & FUEL — PRODUCT WHITE PAPER
+Built from the team concept deck and expanded into a product blueprint.
+Page 13
+13. Product success metrics, risks, and closing
+recommendation
+A strong first version is not the one with the most screens. It is the one that gives users a clear
+daily plan and makes them want to come back tomorrow.
+Success metrics
+bullet
+Onboarding completion rate
+bullet
+Plan generation completion rate
+bullet
+7-day and 30-day retention
+bullet
+Diary opens per active user
+bullet
+Workouts completed per week
+bullet
+Meal logging frequency
+bullet
+Percent of days with full nutrition +
+workout data
+Key product risks
+bullet
+Too much manual logging creates friction.
+bullet
+Meal planning may feel rigid if swaps are
+weak.
+bullet
+Workout plans may feel generic if
+equipment handling is poor.
+bullet
+History may feel passive unless it turns data
+into encouragement.
+bullet
+Too many early features could slow the
+core diary habit loop.
+Closing recommendation
+Lift & Fuel should be built as a decision-reducing daily companion, not just a calculator. The app
+becomes compelling when the user can open it and immediately know: what to eat, what to train, what
+they have already completed, and how they have been doing lately. That product shape is already
+visible in the team deck; the next step is to turn these sections directly into tickets, flows, and UI states.
+ Personalized
+ Actionable
+ Trackable
